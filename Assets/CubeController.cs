@@ -34,13 +34,11 @@ public class CubeController : MonoBehaviour
                 AudioSource audioSource;
                 audioSource = GetComponent<AudioSource>();
         
-                if(tag == "UnityChanTag")
-                {
-                    audioSource.Stop();
-                }
-                else
+                if(other.gameObject.tag == "ground" || other.gameObject.tag == "Cube")
+                
                 {
                     audioSource.Play();
+                    Debug.Log("text");
                 }
         }
 }
